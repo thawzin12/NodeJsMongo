@@ -5,6 +5,7 @@ all = (req, res) => {
   let products = [];
   db.collection("products")
     .find()
+    .project({ name: 1, price: 1, _id: 0 })
     .forEach((product) => products.push(product))
     .then(() => {
       res
