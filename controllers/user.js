@@ -1,4 +1,11 @@
-const db = require("../utils/db").getConn();
+let users = [
+  { name: "MgMg", age: 20, gender: "Male", isSingle: true },
+  { name: "Mya Mya", age: 22, gender: "Female", isSingle: true },
+  { name: "Mya Tin", age: 20, gender: "Male", isSingle: false },
+  { name: "Ko Mg", age: 23, gender: "Male", isSingle: true },
+  { name: "Hop", age: 27, gender: "Female", isSingle: true },
+];
+
 all = (req, res) => {
   res.json({ con: true, msg: "user list", result: users });
 };
